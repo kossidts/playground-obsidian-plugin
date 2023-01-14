@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
-	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"name": "playground-plugin",
+	"version": "0.1.0",
+	"description": "This Repo is solely for testing and learning the obsidian API. Do not use it in your obsidian app.",
 	"main": "main.js",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
