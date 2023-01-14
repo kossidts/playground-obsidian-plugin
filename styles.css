@@ -5,4 +5,62 @@ available in the app when your plugin is enabled.
 
 If your plugin does not need CSS, delete this file.
 
+List of some available css variables:
+--mono-rgb-0: 0, 0, 0;
+--mono-rgb-100: 255, 255, 255;
+--color-red-rgb: 251, 70, 76;
+--color-red: #fb464c;
+--color-orange-rgb: 233, 151, 63;
+--color-orange: #E9973F;
+--color-yellow-rgb: 224, 222, 113;
+--color-yellow: #E0DE71;
+--color-green-rgb: 68, 207, 110;
+--color-green: #44CF6E;
+--color-cyan-rgb: 83, 223, 221;
+--color-cyan: #53DFDD;
+--color-blue-rgb: 2, 122, 255;
+--color-blue: #027aff;
+--color-purple-rgb: 168, 130, 255;
+--color-purple: #a882ff;
+--color-pink-rgb: 250, 153, 205;
+--color-pink: #FA99CD;
+--color-base-00: #1e1e1e;
+--color-base-10: #242424;
+--color-base-20: #262626;
+--color-base-25: #2a2a2a;
+--color-base-30: #363636;
+--color-base-35: #3F3F3F;
+--color-base-40: #555;
+--color-base-50: #666;
+--color-base-60: #999;
+--color-base-70: #bababa;
+--color-base-100: #dadada;
+--color-accent-hsl: var(--accent-h), var(--accent-s), var(--accent-l);
+--color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+--color-accent-1: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 3.8%));
+--color-accent-2: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) + 3.8%));
+--background-modifier-form-field: var(--color-base-25);
+--background-secondary-alt: var(--color-base-30);
+--interactive-normal: var(--color-base-30);
+--interactive-hover: var(--color-base-35);
+--background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
+--background-modifier-cover: rgba(10, 10, 10, 0.4);
+--text-highlight-bg: rgba(255, 208, 0, 0.4);
+--text-highlight-bg-active: rgba(255, 128, 0, 0.4);
 */
+
+/* Change the look of inline codes */
+.cm-s-obsidian span.cm-inline-code {
+	color: var(--color-orange);
+	background-color: var(--text-highlight-bg-active);
+}
+
+/**
+ * By David Phillips (autonia) https://github.com/autonia
+ * From https://github.com/obsidian-tasks-group/obsidian-tasks/discussions/622#discussioncomment-2649299
+ */
+.tasks-backlink {
+	font-size: 0.7em;
+	opacity: 0.6;
+	filter: grayscale(60%);
+}
