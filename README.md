@@ -1,6 +1,6 @@
 # Obsidian Playground Plugin
 
-**⚠️ Caution:** This Repo is solely for testing and learning the obsidian API. Do not use it in your obsidian app.
+**⚠️ Caution:** This copy of the [obsidian-sample-plugin](https://github.com/obsidianmd/obsidian-sample-plugin) repo and is solely for testing and learning the obsidian API. Do not use it in your obsidian app!
 
 ## Resources
 
@@ -8,7 +8,7 @@
 -   [Obsidian Plugin Developer Docs | Obsidian Plugin Developer Docs](https://marcus.se.net/obsidian-plugin-docs/)
 -   [For Plugin Developers - Obsidian Hub - Obsidian Publish](https://publish.obsidian.md/hub/04+-+Guides%2C+Workflows%2C+%26+Courses/for+Plugin+Developers)
 
-## Use only for learning - if at all
+## Use only for learning purpose - if at all
 
 If you wants to use this repo for learning purpose, follow this steps
 
