@@ -1,4 +1,4 @@
-# My Obsidian Playground Plugin
+# Obsidian Playground Plugin
 
 **⚠️ Caution:** This Repo is solely for testing and learning the obsidian API. Do not use it in your obsidian app.
 
