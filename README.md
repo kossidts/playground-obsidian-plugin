@@ -13,6 +13,7 @@
 If you wants to use this repo for learning purpose, follow this steps
 
 -   Clone this repo.
+-   Make sure your NodeJS is at least v16 (`node --version`)
 -   `npm i` or `yarn` to install dependencies
 -   (optional - might break the current state) `npm update` to update the Obsidian API
 -   `npm run dev` to start compilation in watch mode.

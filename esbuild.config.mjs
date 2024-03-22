@@ -1,7 +1,9 @@
-import process, { stderr, stdout } from "node:process";
+import process from "node:process";
 import path from "node:path";
 import { copyFileSync, readFileSync, writeFileSync } from "node:fs";
+import { access, constants } from "node:fs/promises";
 import { exec } from "node:child_process";
+import resolver from "await-resolver";
 
 import * as dotenv from "dotenv";
 import esbuild from "esbuild";
@@ -84,15 +86,25 @@ if (prod) {
 	}
 	const testTargetDir = path.join(process.env.APP_PLUGIN_DIR, manifest.id);
 	// Auto deploy into the plugins folder of the installed obsidian for testing
+
+	const [pathErr, _] = await resolver(
+		access(testTargetDir, constants.R_OK | constants.W_OK)
+	);
+
+	if (pathErr) {
+		console.error(pathErr.message);
+		process.exit(1);
+	}
+
 	exec(
-		`cp ${pathToOutputDir}/* ${testTargetDir}/`,
+		`cp ${pathToOutputDir}/* "${testTargetDir}"/`,
 		(error, stdout, stderr) => {
 			if (error) {
 				throw error;
 			}
 			console.log(stdout);
 			console.log(
-				"+---+> Auto deploy to the plugins folder of the installed obsidian for testing"
+				"+---+> Auto deploy to the obsidian plugins folder for testing.\n"
 			);
 			process.exit(0);
 		}
